@@ -106,7 +106,7 @@ int main() {
         int minDist = 999999999;
         int x;
         for (int i = 0; i < STORAGE_NUMBER + 1; i++) {
-            if (adjacentStorages[currentStorage][i] != -1 && minCost[i] < minDist) {
+            if ((adjacentStorages[currentStorage][i] != -1 || adjacentStorages[i][currentStorage] != -1) && minCost[i] < minDist) {
                 minDist = minCost[i];
                 x = i;
                 }
